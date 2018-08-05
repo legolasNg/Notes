@@ -283,7 +283,7 @@ sudo dnf install code
 ### 7.安装non-free解码器
 
 ```bash
-sudo dnf install gstreamer-plugins-base gstreamer1-plugins-base gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-plugins-bad-freeworld ffmpeg gstreamer-ffmpeg
+sudo dnf install gstreamer-plugins-base gstreamer1-plugins-base gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-plugins-bad-freeworld ffmpeg gstreamer-ffmpeg ffmpeg-libs xvidcore libdvdread libdvdnav lsdvd libmpg123
 ```
 
 ### 8.安装音频组件
@@ -346,3 +346,25 @@ sudo dnf install adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-s
 ```
 
 安装字体和主题后，通过`gnome-tweaks`来设置字体和主题
+
+## 12.安装网易云音乐
+
+```bash
+## 安装解码器
+sudo dnf install gstreamer-plugins-base gstreamer1-plugins-base gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-plugins-bad-freeworld ffmpeg gstreamer-ffmpeg ffmpeg-libs xvidcore libdvdread libdvdnav lsdvd libmpg123
+## 安装依赖(1.1版本的网易云音乐将很多库都打包了，所以需要手动解决的依赖很少)
+sudo dnf install vlc
+
+## 下载官网的deb包
+mkdir netease-cloud-music
+cd netease-cloud-music
+wget http://d1.music.126.net/dmusic/netease-cloud-music_1.1.0_amd64_ubuntu.deb
+
+## 解压deb包
+ar -xvf netease-cloud-music_1.1.0_amd64_ubuntu.deb
+##  解压data包(control.tar.gz主要是用于文件校验，debian-binary是deb的版本)
+tar -xvf data.tar.xz
+
+## 复制文件到/usr
+sudo cp -r usr/* /usr/
+```
