@@ -1,3 +1,5 @@
+# Vim init
+
 ## 安装vim
 
 ```bash
@@ -8,6 +10,12 @@ sudo dnf install vim
 
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+## 安装依赖
+
+```bash
+sudo dnf install ctag
 ```
 
 ## 复制配置文件

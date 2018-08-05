@@ -55,6 +55,9 @@ map <F4> :NERDTreeToggle<CR>
 let NERDTreeWinPos="left"
 let NERDTreeIgnore=['\.svn$','\.git$', '\.swp$']
 autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree
+wincmd w
+autocmd VimEnter * wincmd w
 
 " ctrlp
 let g:ctrlp_map = '<c-p>'
