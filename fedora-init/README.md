@@ -252,7 +252,7 @@ sudo dnf install menulibre
 
 - Removable Drive Menu
 
-- Topicons plus
+- Topicons / Topicons plus(好像有bug)
 
 - User themes
 
@@ -342,7 +342,9 @@ sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/ho
 sudo dnf install paper-icon-theme
 
 ## 安装思源字体(等宽、衬线)
-sudo dnf install adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts
+sudo dnf install adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts 
+## 安装思源黑体(建议中文字体使用这个)
+sudo dnf install adobe-source-han-sans-cn-fonts
 ```
 
 安装字体和主题后，通过`gnome-tweaks`来设置字体和主题
