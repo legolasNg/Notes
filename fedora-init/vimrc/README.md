@@ -1,4 +1,4 @@
-# Vim init
+# Vim初始化
 
 ## 安装vim
 

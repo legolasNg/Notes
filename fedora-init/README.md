@@ -114,7 +114,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 在 [flathub](https://flathub.org/home) 找相应的app，可以安装flatpak软件:
 
-```
+```bash
 sudo flatpak install flathub com.visualstudio.code
 ```
 
@@ -155,7 +155,7 @@ max_parallel_downloads=6
 查看SELinux状态:
 
 ```bash
-/usr/sbin/sestatus -v 
+/usr/sbin/sestatus -v
 ```
 
 如果状态是enabled，则代表SELinux开启，需要修改`/etc/selinux/config`配置文件，将SELINUX修改为disabled:
@@ -175,10 +175,10 @@ dnf install sudo
 修改`/etc/sudoers`配置文件:
 
 ```bash
-root                ALL=(ALL)       ALL
+root        ALL=(ALL)       ALL
 
-%wheel          ALL=(ALL)       ALL
-USERNAME    ALL=(ALL)       ALL
+%wheel      ALL=(ALL)       ALL
+[USERNAME]  ALL=(ALL)       ALL
 ```
 
 其他需要sudo的用户，可以将用户添加到wheel组:
@@ -187,17 +187,45 @@ USERNAME    ALL=(ALL)       ALL
 usermod -aG wheel USERNAME
 ```
 
+### 4.设置root密码和主机名
+
+```bash
+## 切换到root
+sudo su
+## 修改密码
+passwd root
+
+## 设置主机名
+sudo hostnamectl --static set-hostname [localhost]
+```
+
+### 5.将主目录文件夹由中文切换为英文
+
+```bash
+## 修改系统当前语言
+export LANG=en_US
+
+## 通过命令修改主目录下的文件夹
+xdg-user-dirs-gtk-update
+
+## 将语言环境修改回中文
+export LANG=zh_CN.UTF-8
+```
+
+还可以通过修改`~/.config/user-dirs.dirs`配置文件;
+再或者通过"设置"=>"Region & Language"=>"语言"，将语言修改为英文后注销，重新登陆后会弹出窗口修改主目录文件夹，修改完之后将语言修改回中文，然后再注销登陆一次，弹出窗口选择不更改。
+
 ## 三、必备软件
 
 ### 1.常用软件
 
 ```bash
-sudo dnf install htop 
+sudo dnf install htop
 sudo dnf install screenfetch
 sudo dnf install vim git
 sudo dnf install zsh
 sudo dnf install gcc gcc-c++ gdb
-sudo dnf install mpv 
+sudo dnf install mpv
 sudo dnf install unrar unzip
 ```
 
@@ -268,7 +296,7 @@ sudo dnf install nautilus-open-terminal
 
 ### 6.安装vscode
 
-```
+```bash
 ## 导入密钥
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
