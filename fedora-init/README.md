@@ -352,8 +352,8 @@ sudo dnf install shadowsocks-qt5
 sudo ln -s /usr/lib64/libbotan-2.so.7 /usr/lib64/libbotan-2.so.5
 
 ## 命令行使用代理，只需要设置环境变量即可，协议名与开放端口协议一致:
-export http_proxy="socks5://1.1.1.1:1080"
-export https_proxy="socks5://1.1.1.1:1080"
+export http_proxy="socks5://127.0.0.1:1080"
+export https_proxy="socks5://127.0.0.1:1080"
 ```
 
 ### 11.安装字体和主题

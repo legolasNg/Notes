@@ -15,7 +15,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 ## 安装依赖
 
 ```bash
-sudo dnf install ctag
+sudo dnf install ctags
 ```
 
 ## 复制配置文件
