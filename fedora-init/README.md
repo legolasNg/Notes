@@ -368,7 +368,7 @@ sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/ho
 sudo dnf install paper-icon-theme
 
 ## 安装思源字体(等宽、衬线)
-sudo dnf install adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts 
+sudo dnf install adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts
 ## 安装思源黑体(建议中文字体使用这个)
 sudo dnf install adobe-source-han-sans-cn-fonts
 ```
@@ -395,4 +395,13 @@ tar -xvf data.tar.xz
 
 ## 复制文件到/usr
 sudo cp -r usr/* /usr/
+```
+
+### 13.安装Clion
+
+```bash
+wget https://download.jetbrains.com/cpp/CLion-2018.2.tar.gz
+tar xzvf CLion-2018.2.tar.gz
+sudo cp -R ./clion-2018.2 /opt/
+/opt/clion-2018.2/bin/clion.sh
 ```
