@@ -412,3 +412,11 @@ sudo cp -R ./clion-2018.2 /opt/
 ## 执行clion安装脚本
 /opt/clion-2018.2/bin/clion.sh
 ```
+
+### 14.安装telegram
+
+```bash
+sudo dnf install telegram-desktop
+```
+
+Notes: __国内使用telegram需要配合代理使用__
