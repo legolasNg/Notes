@@ -109,14 +109,28 @@ skip_if_unavailable=False
 ```bash
 sudo dnf install flatpak
 
+## 添加flatpak的remote
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+## 删除remote
+sudo flatpak remote-delete flathub
 ```
 
 在 [flathub](https://flathub.org/home) 找相应的app，可以安装flatpak软件:
 
 ```bash
+## 安装flatpak包
 sudo flatpak install flathub com.valvesoftware.Steam
 sudo flatpak install flathub com.visualstudio.code
+
+## 运行app
+flatpak run flathub com.valvesoftware.Steam
+
+## 卸载app
+sudo flatpak uninstall flathub com.valvesoftware.Steam
+
+## 更新apps
+sudo flatpak update
 ```
 
 ### 4.添加fedy源
@@ -310,7 +324,11 @@ sudo dnf install code
 ### 7.安装non-free解码器
 
 ```bash
-sudo dnf install gstreamer-plugins-base gstreamer1-plugins-base gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-plugins-bad-freeworld ffmpeg gstreamer-ffmpeg ffmpeg-libs xvidcore libdvdread libdvdnav lsdvd libmpg123
+## 开启openh264仓库
+sudo dnf config-manager --set-enabled fedora-cisco-openh264
+
+## 安装解码器
+sudo dnf install gstreamer-plugins-base gstreamer1-plugins-base gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer1-plugins-ugly gstreamer-plugins-good-extras gstreamer1-plugins-good-extras gstreamer1-plugins-bad-freeworld ffmpeg gstreamer-ffmpeg ffmpeg-libs xvidcore libdvdread libdvdnav lsdvd libmpg123 gstreamer1-plugin-openh264 gstreamer1-libav
 ```
 
 ### 8.安装音频组件
