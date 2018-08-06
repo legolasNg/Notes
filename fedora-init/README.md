@@ -115,6 +115,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 在 [flathub](https://flathub.org/home) 找相应的app，可以安装flatpak软件:
 
 ```bash
+sudo flatpak install flathub com.valvesoftware.Steam
 sudo flatpak install flathub com.visualstudio.code
 ```
 
