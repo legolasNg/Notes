@@ -375,7 +375,7 @@ sudo dnf install adobe-source-han-sans-cn-fonts
 
 安装字体和主题后，通过`gnome-tweaks`来设置字体和主题
 
-## 12.安装网易云音乐
+### 12.安装网易云音乐
 
 ```bash
 ## 安装解码器
