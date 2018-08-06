@@ -400,8 +400,15 @@ sudo cp -r usr/* /usr/
 ### 13.安装Clion
 
 ```bash
+## 从jetbrains下载最新的clion包
 wget https://download.jetbrains.com/cpp/CLion-2018.2.tar.gz
+
+## 解压到当前目录
 tar xzvf CLion-2018.2.tar.gz
+
+## 复制到/opt目录下
 sudo cp -R ./clion-2018.2 /opt/
+
+## 执行clion安装脚本
 /opt/clion-2018.2/bin/clion.sh
 ```
