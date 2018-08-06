@@ -280,13 +280,11 @@ sudo dnf install menulibre
 
 - Removable Drive Menu
 
-- Topicons / Topicons plus(好像有bug)
+- Topicons
 
 - User themes
 
 - Windows list
-
-- System-monitor
 
 ### 5.安装"右键终端打开"
 
