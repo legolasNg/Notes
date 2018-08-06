@@ -420,3 +420,23 @@ sudo dnf install telegram-desktop
 ```
 
 Notes: __国内使用telegram需要配合代理使用__
+
+### 15.删除不必要的软件
+
+```bash
+## 删除gnome自带
+sudo dnf autoremove simple-scan
+sudo dnf autoremove cheese
+sudo dnf autoremove gnome-maps
+sudo dnf autoremove gnome-contacts
+sudo dnf autoremove gnome-weather
+sudo dnf autoremove gnome-clocks
+sudo dnf autoremove gnome-online-miners
+
+## 删除ibus自带
+sudo dnf autoremove ibus-libpinyin
+sudo dnf autoremove ibus-libzhuyin
+sudo dnf autoremove ibus-hangul
+sudo dnf autoremove ibus-kkc
+sudo dnf autoremove ibus-m17n
+```
