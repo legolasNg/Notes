@@ -301,10 +301,10 @@ sudo dnf install menulibre
 
 - Windows list
 
-### 5.安装"右键终端打开"
+### 5.安装nautilus插件
 
 ```bash
-sudo dnf install nautilus-open-terminal
+sudo dnf install gnome-terminal-nautilus nautilus-search-tool
 ```
 
 ### 6.安装vscode
@@ -317,7 +317,7 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 
 ## 安装vscode
-dnf check-update
+sudo dnf check-update
 sudo dnf install code
 ```
 
