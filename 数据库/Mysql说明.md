@@ -47,8 +47,12 @@ ln -s /data/mysql/mysql.sock /var/lib/mysql/mysql.sock
 
 ```sql
 GRANT [privilege] ON [dbName].[tableName] '[user]'@'[ip]' IDENTIFIED BY "[password]"  WITH GRANT OPTION
-GRANT ALL PRIVILEGES ON *.* TO 'zbgame'@'%' IDENTIFIED BY "zbgame@2016"  WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' IDENTIFIED BY "password"  WITH GRANT OPTION;
 FLUSH PRIVILEGES;
+
+-- 8.0版本后，新建用户和创建/修改密码，不能在GRANT操作中进行
+CREATE USER [dbName].[tableName] IDENTIFIED BY "[password]";
+GRANT [privilege] ON [dbName].[tableName] TO '[user]'@'[ip]' WITH GRANT OPTION;
 ```
 
 也可以通过修改表来操作
