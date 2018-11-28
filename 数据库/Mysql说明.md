@@ -51,7 +51,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' IDENTIFIED BY "password"  WITH GRANT O
 FLUSH PRIVILEGES;
 
 -- 8.0版本后，新建用户和创建/修改密码，不能在GRANT操作中进行
-CREATE USER [dbName].[tableName] IDENTIFIED BY "[password]";
+CREATE USER '[user]'@'[ip]' IDENTIFIED BY "[password]";
 GRANT [privilege] ON [dbName].[tableName] TO '[user]'@'[ip]' WITH GRANT OPTION;
 ```
 
