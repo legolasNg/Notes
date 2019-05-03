@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -107,5 +109,9 @@ source $ZSH/oh-my-zsh.sh
 # export http_proxy="socks5://127.0.0.1:1080"
 # export https_proxy="socks5://127.0.0.1:1080"
 
-alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
-alias unsetproxy="unset ALL_PROXY"
+# proxy switch
+alias set_proxy="export ALL_PROXY=socks5://127.0.0.1:1080"
+alias unset_proxy="unset ALL_PROXY"
+
+# vhost login
+alias vhost_login="ssh [user]@[hostname] -p [port] -i [identity_file]"

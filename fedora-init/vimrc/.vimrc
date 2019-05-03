@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'yggdroot/indentline'
 
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv'
@@ -20,6 +21,20 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'mbbill/undotree'
+
+Plug 'valloric/youcompleteme'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'easymotion/vim-easymotion'
+
+Plug 'morhetz/gruvbox'
+Plug 'tomasr/molokai'
+Plug 'cocopon/iceberg.vim'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
@@ -30,6 +45,10 @@ set fileencodings=utf-8,gbk,default,latin1
 " filetype and syntax
 filetype plugin indent on
 syntax on
+
+" theme
+set background=dark
+colorscheme gruvbox
 
 " normal
 set number
@@ -50,6 +69,9 @@ set smartcase
 " tagBar
 nmap <F8> :TagbarToggle<CR>
 
+" undotree
+nnoremap <F5> :UndotreeToggle<CR>
+
 " nerdTree
 map <F4> :NERDTreeToggle<CR>
 let NERDTreeWinPos="left"
@@ -67,3 +89,28 @@ let g:ctrlp_working_path_mode = 'ra'
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
+
+" YCM
+let g:ycm_global_ycm_extra_conf = '/home/legolas/.vim/plugged/youcompleteme/third_party/ycmd/.ycm_extra_conf.py'
+
+" comment
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+" indent
+let g:indentLine_enabled = 1
+let g:indentLine_char = '┆'
